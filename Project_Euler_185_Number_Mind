@@ -19,7 +19,7 @@ while k==0:                             #Rellenar de 0 a 9 la matriz de salida
             k=k+1
 w, h, j, k, i = 12, num, 0, 0, 0
 #************************************************************************
-while k==0:                             #Eliminar los 0 de SQ3
+while k==0:                             #Rellenar SQ2 y SQ3
     for i in range (0,h):               
         sq3[i][j]=int(sq[i][j:j+1])
         sq2[i][j]=int(sq[i][j:j+1])
@@ -27,7 +27,7 @@ while k==0:                             #Eliminar los 0 de SQ3
             j=j+1
         if j==12:
             k=k+1
-for i in range (0,h):
+for i in range (0,h):                   #Eliminar los 0 de SQ3
     if nc[i]=='0':
         for j in range (0,w):
             sq3[i][j]=0
@@ -37,8 +37,9 @@ w, h, j, k, i = 12, num, 0, 0, 0
 for i in range (0,num):
     if nc[i]=='0':
         for j in range (0,w):
-            if sq2[i][j]==ot[i][j]:
-                ot[i][j]=0
+            #if sq2[i][j]==ot[i][j]:
+            pass
+                #ot[i][j]=0
 w, h, j, k, i = 12, num, 0, 0, 0
 #************************************************************************     
 print('************************************         OT')
