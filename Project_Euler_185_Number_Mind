@@ -2,9 +2,9 @@ import array
 num=int(input())
 nc={}
 sq={}
-w, h, j, k, i = 12, num, 0, 0, 0
-sq2 = [[0 for x in range(w)] for y in range(h)] 
-sq3 = [[0 for x in range(w)] for y in range(h)]
+j, k, i =  0, 0, 0
+sq2 = [[0 for x in range(12)] for y in range(num)] 
+sq3 = [[0 for x in range(12)] for y in range(num)]
 ot  = [[0 for x in range(12)] for y in range(10)]
 for i in range (0,num):
     entry = str(input()).split(" ")
@@ -17,37 +17,37 @@ while k==0:                             #Rellenar de 0 a 9 la matriz de salida
             j=j+1
         if j==12:
             k=k+1
-w, h, j, k, i = 12, num, 0, 0, 0
+j, k, i =  0, 0, 0
 #************************************************************************
 while k==0:                             #Rellenar SQ2 y SQ3
-    for i in range (0,h):               
+    for i in range (0,num):               
         sq3[i][j]=int(sq[i][j:j+1])
         sq2[i][j]=int(sq[i][j:j+1])
-        if i==h-1:
+        if i==num-1:
             j=j+1
         if j==12:
             k=k+1
-for i in range (0,h):                   #Eliminar los 0 de SQ3
+for i in range (0,num):                   #Eliminar los 0 de SQ3
     if nc[i]=='0':
-        for j in range (0,w):
+        for j in range (0,12):
             sq3[i][j]=0
 #************************************************************************
 #************************************************************************
-w, h, j, k, i = 12, num, 0, 0, 0
-for i in range (0,num):
-    if nc[i]=='0':
-        for j in range (0,w):
-            #if sq2[i][j]==ot[i][j]:
-            pass
-                #ot[i][j]=0
-w, h, j, k, i = 12, num, 0, 0, 0
+j, k, i =  0, 0, 0
+for k in range (0,num):
+    if nc[k]=='0':
+        for i in range (0,10):
+            for j in range (0,12):
+                if sq2[k][j]==ot[i][j]:
+                    ot[i][j]=0
+j, k, i =  0, 0, 0
 #************************************************************************     
 print('************************************         OT')
 for i in range (0,10):                   #RES
     print (ot[i])
 print('************************************         SQ2')
-for i in range (0,h):                   #SQ2
+for i in range (0,num):                   #SQ2
     print (sq2[i],nc[i])
 print('************************************         SQ3')
-for i in range (0,h):                   #SQ3
+for i in range (0,num):                   #SQ3
     print (sq3[i],nc[i])
