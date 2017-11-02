@@ -1,0 +1,45 @@
+import array
+num=int(input())
+nc={}
+sq={}
+w, h, j, k, i = 12, num, 0, 0, 0
+sq2 = [[0 for x in range(w)] for y in range(h)] 
+sq3 = [[0 for x in range(w)] for y in range(h)]
+ot = [[0 for x in range(12)] for y in range(9)]
+#while k==0:
+#    for i in range (0,9):
+#        ot[i][j]=i
+#        if i==10-1:
+#            j=j+1
+#        if j==12:
+#           k=k+1
+#************************************************************************
+for i in range (0,num):
+    entry = str(input()).split(" ")
+    sq[i] = str(entry[0])
+    nc[i] = str(entry[1])
+while k==0:
+    for i in range (0,h):               #N
+        sq3[i][j]=int(sq[i][j:j+1])
+        sq2[i][j]=int(sq[i][j:j+1])
+        if i==h-1:
+            j=j+1
+        if j==12:
+            k=k+1
+for i in range (0,h):
+    if nc[i]=='0':
+        for j in range (0,w):
+            sq3[i][j]=0
+#************************************************************************
+for i in range (0,h):
+    #if nc[i]=='0':
+    pass
+#************************************************************************     
+#for i in range (0,12):                   #RES
+#    print (ot[i])
+print('************************************')
+for i in range (0,h):                   #SQ2
+    print (sq2[i],nc[i])
+print('************************************')
+for i in range (0,h):                   #SQ3
+    print (sq3[i],nc[i])
