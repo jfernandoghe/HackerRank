@@ -10,13 +10,14 @@ for i in range (0,num):
     entry = str(input()).split(" ")
     sq[i] = str(entry[0])
     nc[i] = str(entry[1])
-#while k==0:
-#    for i in range (0,9):
-#        ot[i][j]=i
-#        if i==10-1:
-#            j=j+1
-#        if j==12:
-#           k=k+1
+while k==0:
+    for i in range (0,10):
+        ot[i][j]=i
+        if i==9:
+            j=j+1
+        if j==11:
+            k=k+1
+w, h, j, k, i = 12, num, 0, 0, 0
 #************************************************************************
 while k==0:
     for i in range (0,h):               #N
