@@ -1,3 +1,19 @@
+import array
+import array
+num=int(input())
+nc={}
+nc2={}
+sq={}
+j, k, i, e, tot =  0, 0, 0, 0, 0
+sq2 = [[0 for x in range(12)] for y in range(num)] 
+sq3 = [[0 for x in range(12)] for y in range(num)]
+ot  = [[0 for x in range(12)] for y in range(10)]
+o = [0,0,0,0,0,0,0,0,0,0,0,0]
+for i in range (0,num):
+    entry = str(input()).split(" ")
+    sq[i] = str(entry[0])
+    nc[i] = str(entry[1])
+    nc2[i]= int(nc[i])
 while k==0:                             #Rellenar de 0 a 9 la matriz de salida
     for i in range (0,10):
         ot[i][j]=i
